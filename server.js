@@ -53,11 +53,11 @@ app.post('/submit', async (req, res) => {
     await newStudent.save();
     
     const alertMessage = "Course registration successful. Check your Registration.";
-    return res.send(`<script>alert('${alertMessage}'); window.location.href='https://credex-nptel.netlify.app/confirmation.html';</script>`);
+    return res.send(`<script>alert('${alertMessage}'); window.location.href='http://3.227.166.96:81/confirmation.html';</script>`);
   } catch (error) {
     console.error(error);
     const alertMessage = "Error saving to the database. Please try again later.";
-    return res.send(`<script>alert('${alertMessage}'); window.location.href='https://credex-nptel.netlify.app/confirmation.html';</script>`);
+    return res.send(`<script>alert('${alertMessage}'); window.location.href='http://3.227.166.96:81/confirmation.html';</script>`);
   }
 });
 
