@@ -40,13 +40,13 @@ app.post('/submit', async (req, res) => {
     const existingStudentByRoll = await Prefinal.findOne({ rollno: rollno });
     if (existingStudentByRoll) {
       const alertMessage = "Roll number is already Registered. Thank You.";
-      return res.send(`<script>alert('${alertMessage}'); window.location.href='https://credex-nptel.netlify.app/confirmation.html';</script>`);
+      return res.send(`<script>alert('${alertMessage}'); window.location.href='http://3.227.166.96:81/';</script>`);
     }
      
     const existingStudentByEmail = await Prefinal.findOne({ email: email });
     if (existingStudentByEmail) {
       const alertMessage = "You are already registered. Check your Registration.";
-      return res.send(`<script>alert('${alertMessage}'); window.location.href='https://credex-nptel.netlify.app/confirmation.html';</script>`);
+      return res.send(`<script>alert('${alertMessage}'); window.location.href='http://3.227.166.96:81/';</script>`);
     }      
 
     const newStudent = new Prefinal({ email, name, rollno, year, department, phone, academicYear, courses });
