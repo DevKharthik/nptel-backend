@@ -45,7 +45,7 @@ app.post('/submit', async (req, res) => {
     return false;
   }
   if(!validateRollno(rollno)){
-    const alertMessage = "Please Enter a valid rollo";
+    const alertMessage = "Please Enter a valid rollno";
     return res.send(`<script>alert('${alertMessage}'); window.history.back();</script>`);
   }
   rollno="23CS" + rollno;
